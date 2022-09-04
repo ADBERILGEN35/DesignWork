@@ -57,6 +57,15 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Handle login failuer
+     *
+     * editText empty control
+     * Username and password check
+     *
+     * @param userName
+     * @param password
+     */
     private fun handleLoginFailuer(userName: String, password: String) {
         if (userName == "") {
             binding.textUserName.requestFocus()
