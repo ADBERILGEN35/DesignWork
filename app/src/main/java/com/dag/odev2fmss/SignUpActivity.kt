@@ -52,6 +52,12 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Sign up failure
+     *
+     * editText empty control
+     *
+     */
     private fun signUpFailure() {
         if (emailId == "") {
             binding.editTextEmailAddress.requestFocus()
@@ -65,6 +71,13 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Handle sign up
+     *
+     * New user creation function
+     *
+     * @param sharedPreferences
+     */
     private fun handleSignUp(sharedPreferences: SharedPreferences) {
         val alert = AlertDialog.Builder(this@SignUpActivity)
         alert.setTitle("Yeni kullanıcı kaydı oluşturulsun mu ?")
