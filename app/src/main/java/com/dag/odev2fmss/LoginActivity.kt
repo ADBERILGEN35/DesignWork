@@ -28,8 +28,6 @@ class LoginActivity : AppCompatActivity() {
 
         binding.buttonLogin.setOnClickListener {
             loginUser()
-            binding.textUserName.text?.clear()
-            binding.textPassword.text?.clear()
         }
 
         binding.buttonBack.setOnClickListener {
@@ -53,7 +51,11 @@ class LoginActivity : AppCompatActivity() {
         val preferencePassword = preferences.getString("password", "")
         if (userName == preferenceUserName && password == preferencePassword) {
             Toast.makeText(this, "Başarıyla giriş yapılmıştır.", Toast.LENGTH_LONG).show()
-        } else handleLoginFailuer(userName, password)
+            binding.textUserName.text?.clear()
+            binding.textPassword.text?.clear()
+        } else {
+            handleLoginFailuer(userName, password)
+        }
 
     }
 
@@ -76,6 +78,8 @@ class LoginActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Lütfen giriş bilgilerinizi kontrol ediniz.", Toast.LENGTH_LONG)
                 .show()
+            binding.textUserName.text?.clear()
+            binding.textPassword.text?.clear()
 
         }
     }
