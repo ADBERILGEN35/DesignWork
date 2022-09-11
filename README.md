@@ -1,5 +1,5 @@
 
-# Desing Work
+# Design Work
 
 [Figmada](https://www.figma.com/file/54uIE3jRXOMaYXfY8hVUup/Login-Screen-Mobile-Ui-Design-(Community)?node-id=0%3A1) verilen tasarım  projeye uygulanmıştır. Kullanıcı girişi için **SharedPreferences** kullanılmıştır. 
 
